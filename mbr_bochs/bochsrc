@@ -1,0 +1,21 @@
+romimage: file=$BXSHARE/BIOS-bochs-latest 
+vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest
+megs: 16
+ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
+ata0-master: type=disk, path="c.img", mode=flat, cylinders=20, heads=16, spt=63
+boot: disk
+vga_update_interval: 150000
+vga: extension=vbe
+keyboard_serial_delay: 250
+keyboard_paste_delay: 100000
+mouse: enabled=0
+log: nul
+logprefix: %t%e%d
+panic: action=fatal
+error: action=report
+info: action=report
+debug: action=ignore
+pass: action=fatal
+keyboard_mapping: enabled=0, map=
+keyboard_type: mf
+user_shortcut: keys=none
